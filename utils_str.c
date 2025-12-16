@@ -77,13 +77,3 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-void	cmd_not_found(const char *cmd)
-{
-	size_t	len;
-
-	write(2, "pipex: command not found: ", 26);
-	len = ft_strlen(cmd);
-	write(2, cmd, len);
-	write(2, "\n", 1);
-	exit(127);
-}
